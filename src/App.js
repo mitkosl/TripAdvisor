@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Details from './components/Details/Details';
 import List from './components/List/List';
-import Map from './components/Map/Map.jsx';
+import GoogleMap from './components/GoogleMap/GoogleMap.jsx';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
               <List />
             </Grid>
             <Grid item xs={12} md={8}>
-              <Map />
+              <GoogleMap />
             </Grid>
         </Grid>
     </>

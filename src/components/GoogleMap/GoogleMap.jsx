@@ -7,7 +7,7 @@ import { useLoadScript } from 'google-map-react'
 
 import useStyles from './styles'
 
-const Map = () => {
+const GoogleMap = () => {
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width: 600px)');
     const coordinates = { lat: 0, long: 0 };
@@ -22,19 +22,19 @@ const Map = () => {
 
     return(
         <div id="Map" className={classes.mapContainer}>
-            <GoogleMapReact
-                bootstrapURLkeys={{ key: 'AIzaSyDgAeHRRNSqZTKK69FjG3CYtA8PplzfAag' }}
+            {/* <GoogleMapReact
+                bootstrapURLkeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
                 defaultCenter={coordinates}
                 center={coordinates}
                 defaultZoom={14}
                 margin={[50, 50, 50, 50]}
-                options={''}
-                onChange={''}
-                onChildClick={''}
+                // options={''}
+                // onChange={''}
+                // onChildClick={''}
                 >
-            </GoogleMapReact>
+            </GoogleMapReact> */}
         </div>
     );
 } 
 
-export default Map;
+export default GoogleMap;
